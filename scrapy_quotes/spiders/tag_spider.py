@@ -14,8 +14,8 @@ class TagSpider(scrapy.Spider):
     def parse(self, response):
         for quote in response.css("div.quote"):
             yield {
-                "text": quote.css("span.text").get(),
-                "author": quote.css("small.author").get()
+                "text": quote.css("span.text::text").get(),
+                "author": quote.css("small.author::text").get()
             }
 
         next_page = response.css("li.next a::attr(href)").get()
