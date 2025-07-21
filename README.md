@@ -1,3 +1,4 @@
+
 # 📚 Scrapy Quotes Crawler
 
 This project is a simple **web scraper** built using [Scrapy](https://scrapy.org/) that extracts quotes and author information from [quotes.toscrape.com](https://quotes.toscrape.com/).
@@ -14,18 +15,19 @@ This project is a simple **web scraper** built using [Scrapy](https://scrapy.org
 
 ## 📁 Project Structure
 
+```
 scrapy_quotes/
 ├── scrapy_quotes/
-│ ├── init.py
-│ ├── items.py
-│ ├── middlewares.py
-│ ├── pipelines.py
-│ ├── settings.py
-│ └── spiders/
-│ ├── init.py
-│ └── author_spider.py
+│   ├── __init__.py
+│   ├── items.py
+│   ├── middlewares.py
+│   ├── pipelines.py
+│   ├── settings.py
+│   └── spiders/
+│       ├── __init__.py
+│       └── author_spider.py
 ├── scrapy.cfg
-
+```
 
 ## 🕷 Spider Details
 
@@ -39,7 +41,7 @@ scrapy_quotes/
   - `dob` – date of birth
   - `bio` – short biography
 
-### Example Extracted Data
+### 🧪 Example Extracted Data
 
 ```json
 {
@@ -47,30 +49,43 @@ scrapy_quotes/
   "dob": "March 14, 1879",
   "bio": "Lorem ipsum author biography..."
 }
+```
 
-🧪 How to Run the Spider
-Install Scrapy (if not already installed):
+## 🧪 How to Run the Spider
 
+### Install Scrapy (if not already installed):
+
+```bash
 pip install scrapy
+```
 
+### Navigate to your project directory:
 
-Navigate to your project directory:
-
+```bash
 cd scrapy_quotes
+```
 
+### Run the spider and export data:
 
-Run the spider and export data:
-
+```bash
 scrapy crawl author -o authors.json
+```
 
-Supported formats: .json, .csv, .xml, etc.
+Supported formats: `.json`, `.csv`, `.xml`, etc.
 
-🧱 Requirements
-Python 3.7 or higher
+## 🧱 Requirements
 
-Scrapy (tested on Scrapy 2.13.3)
+- Python 3.7 or higher
+- Scrapy (tested on Scrapy 2.13.3)
 
-Install dependencies:
+### Install dependencies:
 
+```bash
 pip install -r requirements.txt
-If requirements.txt is not present, just install Scrapy directly using pip install scrapy.
+```
+
+If `requirements.txt` is not present, just install Scrapy directly using:
+
+```bash
+pip install scrapy
+```
