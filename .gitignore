@@ -1,0 +1,26 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Scrapyd deploy files
+.scrapy/
+
+# Output and export files
+*.json
+*.jsonl
+*.csv
+*.jl
+*.xml
+*.html
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Editor settings
+.vscode/
